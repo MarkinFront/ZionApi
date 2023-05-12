@@ -1,3 +1,3 @@
 export const env = {
-    api: 'https://zion-api-git-main-markinfront.vercel.app'
+    api: 'http://172.16.34.21:3333'
 }
