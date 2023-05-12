@@ -11,7 +11,7 @@ const GetStarted = () => (
         <img src={arrowUp} alt="arrow-up" className="w-[23px] h-[23px] object-contain" />
       </div>
      
-      <a href='http://172.16.34.21:3333/doc.html' className="font-poppins font-medium text-[18px] leading-[23.4px]">
+      <a href='http://192.168.3.52:3333/doc.html' className="font-poppins font-medium text-[18px] leading-[23.4px]">
         <span className="text-gradient">Started</span>
       </a>
     </div>
