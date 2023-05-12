@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zion Api's</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="./src/assets/api-svgrepo-com.svg" />
+    <link rel="stylesheet" href="/SwaggerUI/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Source+Code+Pro:400:700" rel="stylesheet">
+
+
+    <!--
+   Estilizando a documentação 
+    -->
+    <style>
+        * {
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        redoc[spec-url] h1 {
+            font-size: 36px !important;
+            font-family: "Source Sans Pro", sans-serif !important;
+            font-weight: 700 !important;
+            line-height: 36px !important;
+            color: rgb(31, 41, 51) !important;
+            margin: 0px 0px 25px !important;
+        }
+        
+        redoc[spec-url] .kfOTos {
+            font-size: 28px !important;
+            font-family: "Source Sans Pro", sans-serif !important;
+            font-weight: 700 !important;
+            line-height: 28px !important;
+            color: rgb(31, 41, 51) !important;
+            margin: 0px 0px 20px !important;
+        }
+        
+        redoc[spec-url] .fgRoXk {
+            display: flex;
+            position: relative;
+            text-align: left;
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 14px;
+            line-height: 1.5em;
+            font-weight: 400;
+            color: rgb(31, 41, 51);
+            text-rendering: optimizespeed !important;
+        }
+        
+        redoc[spec-url] .hqgvLZ {
+            overflow: hidden;
+            flex-direction: column;
+            backface-visibility: hidden;
+            flex: 0 0 auto;
+            background: rgb(255, 255, 255);
+            border-right: 1px solid rgb(228, 231, 235);
+        }
+        
+        redoc[spec-url] .jzOqkP {
+            display: none;
+        }
+        
+        redoc[spec-url] .ertKPV {
+            position: absolute;
+            left: 20px;
+            height: 1.8em;
+            width: 0.9em;
+        }
+        
+        redoc[spec-url] .eNrAZv {
+            width: calc(100% - 40px);
+            box-sizing: border-box;
+            margin: 0px 20px;
+            padding: 5px 10px 5px 20px;
+            border-width: 0px 0px 1px;
+            border-top-style: initial;
+            border-right-style: initial;
+            border-left-style: initial;
+            border-top-color: initial;
+            border-right-color: initial;
+            border-left-color: initial;
+            border-image: initial;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(225, 225, 225);
+            font-family: Roboto, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            color: rgb(51, 51, 51);
+            background-color: transparent;
+            outline: none;
+        }
+        
+        redoc[spec-url] p {
+            display: flex !important;
+            position: relative !important;
+            text-align: left !important;
+            text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased !important;
+            font-family: "Source Sans Pro", sans-serif !important;
+            font-size: 14px !important;
+            line-height: 1.5em !important;
+            font-weight: 400 !important;
+            color: rgb(31, 41, 51);
+            text-rendering: optimizespeed !important;
+            ;
+        }
+        
+        .wfptf>p {
+            font-family: Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.5em;
+            color: rgb(245, 247, 250)!important;
+        }
+        
+        .izOCLq {
+            font-size: 0.929em;
+            line-height: 20px;
+            background-color: rgb(47, 129, 50);
+            color: rgb(255, 255, 255);
+            padding: 3px 10px;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            margin: 0px;
+            border-radius: 15px;
+            width: 73px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .jzfCVP {
+            font-size: 0.929em;
+            line-height: 20px;
+            background-color: rgb(149, 80, 124);
+            color: rgb(255, 255, 255);
+            padding: 3px 10px;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            margin: 0px;
+            border-radius: 15px;
+            width: 73px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .bVkru {
+            font-size: 0.929em;
+            line-height: 20px;
+            background-color: rgb(204, 51, 51);
+            color: rgb(255, 255, 255);
+            padding: 3px 10px;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            margin: 0px;
+            border-radius: 15px;
+            width: 73px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .iwuDdk {
+            font-size: 0.929em;
+            line-height: 20px;
+            background-color: rgb(24, 111, 175);
+            color: rgb(255, 255, 255);
+            padding: 3px 10px;
+            text-transform: uppercase;
+            font-family: Montserrat, sans-serif;
+            margin: 0px;
+            border-radius: 15px;
+            width: 73px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .gXhEov:focus {
+            box-shadow: none !important;
+        }
+        
+        .jdxQrI>ul>li.react-tabs__tab--selected {
+            color: rgb(255, 255, 255) !important;
+            background: rgb(17 23 26) !important;
+        }
+        
+        .gXhEov {
+            outline: 0px;
+            color: inherit;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            padding: 10px 30px 10px 20px;
+            border-radius: 12px !important;
+            background-color: rgb(17, 23, 26);
+            display: flex;
+            white-space: nowrap;
+            -webkit-box-align: center;
+            align-items: center;
+            border-width: 1px 1px 0px;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-left-style: solid;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-image: initial;
+            border-bottom-style: initial;
+            border-bottom-color: initial;
+            transition: border-color 0.25s ease 0s !important;
+        }
+        
+        .gWtHaL {
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+            background: rgb(82, 96, 109) !important;
+            color: rgb(245, 247, 250) !important;
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.33) 0px 0px 6px;
+            overflow: hidden;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            transition: all 0.25s ease 0s;
+            visibility: visible;
+        }
+        
+        .hyeqlU {
+            border: none !important;
+            outline: none !important;
+            background-color: rgb(50, 63, 75) !important;
+            color: rgb(245, 247, 250) !important;
+            font-family: "Source Code Pro", monospace !important;
+            font-size: 14px !important;
+            border-radius: 4px !important;
+            padding: 7px 12px !important;
+            overflow-wrap: break-word !important;
+        }
+        
+        .hyeqlU>span {
+            color: rgb(245, 247, 250) !important;
+        }
+        
+        redoc[spec-url] p {
+            display: flex !important;
+            position: relative !important;
+            text-align: left !important;
+            text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased !important;
+            font-family: "Source Sans Pro", sans-serif !important;
+            font-size: 14px !important;
+            line-height: 1.5em !important;
+            font-weight: 400 !important;
+            color: rgb(31, 41, 51) !important;
+            text-rendering: optimizespeed !important;
+        }
+        
+        .bpmBWn {
+            outline: none !important;
+            border: none !important;
+            background-color: rgb(228, 231, 235) !important;
+            color: rgb(62, 76, 89) !important;
+            border-radius: 4px !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            padding: 2px 20px !important;
+            cursor: pointer;
+            transition: background-color 0.25s ease 0s, border-color 0.25s ease 0s, box-shadow 0.25s ease 0s !important;
+            line-height: 1 !important;
+            font-family: inherit !important;
+            box-shadow: none !important;
+            margin-left: 0.5em !important;
+            text-decoration: none!important;
+            vertical-align: middle !important;
+        }
+        
+        .hqgvLZ {
+            overflow: hidden;
+            flex-direction: column;
+            backface-visibility: hidden;
+            height: 100vh;
+            top: 0px;
+            flex: 0 0 auto;
+            position: fixed;
+            z-index: 20;
+            width: 100%;
+            background: rgb(255, 255, 255) !important;
+            border-right: 1px solid rgb(228, 231, 235)!important;
+            display: none;
+        }
+        
+        .hEydLL a,
+        .hEydLL a:visited,
+        .hEydLL a:hover {
+            padding: 5px 0px;
+            border-top: 1px solid rgb(225, 225, 225);
+            text-decoration: none;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            color: rgb(51, 51, 51) !important;
+        }
+        
+        .hEydLL img {
+            display: none;
+        }
+        
+        .logo {
+            padding-top: 17px;
+            width: 8rem;
+            display: flex;
+            justify-content: center;
+            padding-left: 57px;
+        }
+        
+        .navbar {
+            background-color: #00040F;
+        }
+        
+        .chOOHy {
+            padding: 40px 0px;
+            background: white;
+        }
+        
+        .dYGhuI {
+            width: 40%;
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255) !important;
+            padding: 0px 40px;
+        }
+        
+        .kzhJjR {
+            padding: 40px 0px;
+            background: white;
+            position: relative;
+        }
+        
+        nav {
+            width: 260px;
+            height: 80px;
+            background: rgb(38, 50, 56);
+            border-top: 0px solid rgba(255, 255, 255, .2);
+            border-bottom: 0px solid rgba(255, 255, 255, .2);
+            position: sticky;
+            top: 0;
+        }
+        
+        nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0 100px;
+            justify-content: flex-end;
+        }
+        
+        nav ul li {
+            list-style: none;
+        }
+        
+        nav ul li a {
+            display: block;
+            color: #fff;
+            padding: 0 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 50px;
+            /**  Rarely used! **/
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            margin-left: -80px;
+        }
+        
+        .bBXGSV {
+            z-index: 1;
+            position: relative;
+            overflow: hidden;
+            width: calc(100% - 260px);
+            contain: layout;
+        }
+        
+        .bCOLCR {
+            background: rgb(38, 50, 56) !important;
+            position: absolute !important;
+            top: -100px !important;
+            bottom: 0px !important;
+            right: 0px !important;
+            width: calc((100% - 260px) * 0.4);
+        }
+        
+        .jdxQrI>.react-tabs__tab-panel {
+            background: rgb(50, 63, 75);
+            border-radius: 6px;
+        }
+        
+        .dYGhuI {
+            width: 40%;
+            color: rgb(255, 255, 255);
+            background-color: rgb(38, 50, 56) !important;
+            padding: 0px 40px;
+            border-radius: 22px;
+        }
+        
+        .dYGhuI {
+            width: 30%;
+            color: rgb(255, 255, 255);
+            background-color: rgb(38, 50, 56);
+            padding: 0px 13px;
+            /* top: 88px; */
+            padding-top: 10px;
+            /* padding-left: 103px; */
+        }
+        
+        .iONckA {
+            cursor: pointer;
+            position: relative;
+            margin-bottom: 5px;
+            padding-top: 10px;
+        }
+        
+        .center-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            /****** center box
+	width: 300px;
+	height: 300px;
+	border: solid 1px #aaa;
+	******/
+        }
+        
+        #loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1001;
+        }
+        
+        #loader-wrapper .loader-section {
+            position: fixed;
+            top: 0;
+            width: 51%;
+            height: 100%;
+            background: linear-gradient( 144.39deg, #ffffff -278.56%, #11101d -78.47%, #11101d 91.61%);
+            z-index: 1000;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        
+        #loader-wrapper .loader-section.section-left {
+            left: 0;
+        }
+        
+        #loader-wrapper .loader-section.section-right {
+            right: 0;
+        }
+        
+        #loader {
+            display: block;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            margin: -75px 0 0 -75px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #3498db;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            z-index: 99999;
+        }
+        
+        #loader:before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #e74c3c;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+        }
+        
+        #loader:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #f9c922;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+        
+        .loaded #loader-wrapper {
+            visibility: hidden;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transition: all 0.3s 1s ease-out;
+            transition: all 0.3s 1s ease-out;
+        }
+        
+        .loaded #loader-wrapper .loader-section.section-left {
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        
+        .loaded #loader-wrapper .loader-section.section-right {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+        
+        .loaded #loader {
+            opacity: 0;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <div id="redoc-container">
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <redoc spec-url='http://localhost:3333/swagger.json' no-auto-auth='true'>
+
+    </redoc>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/wll8/redoc-try@1.4.1/dist/try.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector("body").classList.add("loaded");
+            }, 10)
+        });
+    </script>
+
+
+</body>
+
+</html>
