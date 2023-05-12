@@ -1,4 +1,5 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "../assets";
+import { env } from './env'
 
 export const navLinks = [{
         id: "home",
@@ -23,7 +24,7 @@ export const features = [{
         icon: star,
         title: "Documento De Entrada",
         content: "Cadastre, consulte seus Documentos de Entrada a qualquer momento.",
-        link: 'http://localhost:3333/doc.html#tag/Documento-de-Entrada',
+        link: `${env.api}/doc.html#tag/Documento-de-Entrada`,
     },
     {
         id: "feature-2",
