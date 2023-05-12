@@ -4,7 +4,7 @@ import { env } from './env'
 export const navLinks = [{
         id: "home",
         title: "Home",
-        link: "/home",
+        link: `${env.api}/doc.html`,
     },
     {
         id: "apis",
@@ -31,14 +31,14 @@ export const features = [{
         icon: shield,
         title: "Inventário",
         content: "Realize análise, contagem e inventário por meio de nossas API’s.",
-        link: 'http://localhost:3333/doc.html#tag/Inventory',
+        link: `${env.api}/doc.html#tag/Inventory`,
     },
     {
         id: "feature-3",
         icon: send,
         title: "Documento De Saída",
         content: "Cadastre, consulte seus Documentos de Saída a qualquer momento.",
-        link: 'http://localhost:3333/doc.html#tag/Documento-de-Saida',
+        link: `${env.api}/doc.html#tag/Documento-de-Saida`,
     },
 ];
 
