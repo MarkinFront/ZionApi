@@ -1,15 +1,16 @@
 import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "../assets";
-import { env } from './env'
+import { env } from './env';
+import { doc } from './doc';
 
 export const navLinks = [{
         id: "home",
         title: "Home",
-        link: `${env.api}/doc.html`,
+        link: '/Home',
     },
     {
         id: "apis",
         title: "API's",
-        link: "/apis",
+        link: `${doc.api}`,
 
     },
     {
