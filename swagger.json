@@ -19,11 +19,29 @@
         "description": "Generated server url"
     }],
     "tags": [{
+        "name": "Empresa",
+        "description": "empresa"
+    }, {
+        "name": "Produto",
+        "description": "produto"
+    }, {
+        "name": "Tipo Uc",
+        "description": "tipo-uc"
+    }, {
+        "name": "Tipo Código de Barra",
+        "description": "tipo-codigo-barra"
+    }, {
+        "name": "Produto Relacionado",
+        "description": "produto-relacionado"
+    }, {
+        "name": "Previsão de Entrada",
+        "description": "previsao-entrada"
+    }, {
         "name": "Previsão de Entrada Item",
         "description": "previsao-entrada-item"
     }, {
-        "name": "Documento de Saída",
-        "description": "documento-saida"
+        "name": "Documento de Entrada",
+        "description": "documento-entrada"
     }, {
         "name": "Previsão de Saída",
         "description": "previsao-saida"
@@ -31,47 +49,29 @@
         "name": "Previsão de Saída Item",
         "description": "previsao-saida-item"
     }, {
-        "name": "Previsão de Entrada",
-        "description": "previsao-entrada"
+        "name": "Documento de Saída",
+        "description": "documento-saida"
     }, {
         "name": "Troca de Cabeçalho ou Troca do Pedido pela Nota Fiscal NFe",
         "description": "troca-pedido-notafiscal"
     }, {
-        "name": "Empresa",
-        "description": "empresa"
-    }, {
-        "name": "Receivement",
-        "description": "receivement"
-    }, {
-        "name": "Boarding",
-        "description": "boarding"
-    }, {
-        "name": "Expedition",
-        "description": "expedition"
-    }, {
-        "name": "Tipo Código de Barra",
-        "description": "tipo-codigo-barra"
-    }, {
-        "name": "Documento de Entrada",
-        "description": "documento-entrada"
-    }, {
-        "name": "Tipo Uc",
-        "description": "tipo-uc"
+        "name": "Estoque",
+        "description": "estoque"
     }, {
         "name": "Rcq",
         "description": "rcq"
     }, {
-        "name": "Produto Relacionado",
-        "description": "produto-relacionado"
+        "name": "Receivement",
+        "description": "receivement"
     }, {
-        "name": "Estoque",
-        "description": "estoque"
+        "name": "Expedition",
+        "description": "expedition"
+    }, {
+        "name": "Boarding",
+        "description": "boarding"
     }, {
         "name": "Inventory",
         "description": "inventory"
-    }, {
-        "name": "Produto",
-        "description": "produto"
     }],
     "paths": {
         "/tipo-uc/{codigoEmpresa}/{codigoProduto}/{tipoUc}": {
